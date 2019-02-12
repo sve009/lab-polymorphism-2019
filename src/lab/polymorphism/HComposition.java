@@ -1,4 +1,3 @@
-package lab.polymorphism;
 
 /**
  * The horizontal composition of two text blocks.

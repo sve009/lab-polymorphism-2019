@@ -1,4 +1,3 @@
-package lab.polymorphism;
 
 /**
  * One line of text.
@@ -30,6 +29,10 @@ public class TextLine implements TextBlock {
   // +---------+-----------------------------------------------------------
   // | Methods |
   // +---------+
+
+  public void setContents(String newContents) {
+          this.line = newContents;
+  }
 
   /**
    * Get one row from the block.
