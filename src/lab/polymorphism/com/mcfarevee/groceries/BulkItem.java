@@ -26,5 +26,9 @@ public class BulkItem implements Item {
         public String toString() {
                 return amount + " " + unit + "s" + " of " + food.name;
         }
+
+        public int getCount() {
+                return 1;
+        }
 }
 
