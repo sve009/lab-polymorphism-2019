@@ -1,4 +1,3 @@
-package lab.polymorphism.com.mcfarevee.groceries;
 
 
 public class Weight {

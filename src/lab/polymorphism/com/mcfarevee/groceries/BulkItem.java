@@ -1,4 +1,3 @@
-package lab.polymorphism.com.mcfarevee.groceries;
 
 
 public class BulkItem implements Item {
@@ -21,7 +20,7 @@ public class BulkItem implements Item {
         }
 
         public boolean equals(BulkItem other) {
-                return this.food == other.food && this.unit == other.unit && this.amount == other.amount;
+                return this.food.equals(other.food) && this.unit.equals(other.unit) && this.amount == other.amount;
         }
 
         public String toString() {
