@@ -27,6 +27,10 @@ public class NonFood implements Item {
         public String toString() {
                 return this.name;
         }
+
+        public int getCount() {
+                return 1;
+        }
 }
 
 

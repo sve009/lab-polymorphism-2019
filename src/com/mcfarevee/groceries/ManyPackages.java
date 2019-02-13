@@ -20,4 +20,8 @@ public class ManyPackages implements Item {
         public String toString() {
                 return Integer.toString(count) + type + "s";
         }
+
+        public int getCount() {
+                return this.count();
+        }
 }
