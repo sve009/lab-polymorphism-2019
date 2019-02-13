@@ -1,4 +1,5 @@
-package com.mcfarevee.groceries;
+package lab.polymorphism.com.mcfarevee.groceries;
+
 
 public interface Item {
         public Weight getWeight();

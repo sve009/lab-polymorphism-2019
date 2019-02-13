@@ -1,8 +1,16 @@
-package com.mcfarevee.groceries
+package lab.polymorphism.com.mcfarevee.groceries;
+
 
 public class Weight {
-        private Unit unit;
-        private int amount;
+        public Unit unit;
+        public int amount;
+        
+        public Weight(Unit unit, int amount) {
+          this.unit = unit;
+          this.amount = amount;
+        }
 
         public String toString() {
-                return amount + 
+                return amount + " " + unit + (amount == 1 ? "" : "s");
+        }
+}

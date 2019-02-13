@@ -1,4 +1,5 @@
-package com.mcfarevee.groceries;
+package lab.polymorphism.com.mcfarevee.groceries;
+
 
 public class BulkItem implements Item {
         private BulkFood food;
@@ -24,7 +25,7 @@ public class BulkItem implements Item {
         }
 
         public String toString() {
-                return "" + amount + " " + unit + "s" + " of " + food.name;
+                return amount + " " + unit + "s" + " of " + food.name;
         }
 }
 
