@@ -31,6 +31,19 @@ public class NonFood implements Item {
         public int getCount() {
                 return 1;
         }
+
+        
+        public String getType() {
+                return "";
+        }
+
+        public Item stack(int count) {
+                return null;
+        }
+
+        public String getName() {
+                return this.name;
+        }
 }
 
 

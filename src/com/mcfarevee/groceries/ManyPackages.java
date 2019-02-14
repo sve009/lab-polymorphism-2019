@@ -10,7 +10,7 @@ public class ManyPackages implements Item {
         }
 
         public Weight getWeight() {
-                return new Weight(type.getWeight().unit, type.getWeight().amount * count;
+                return new Weight(type.getWeight().unit, type.getWeight().amount * count);
         }
 
         public int getPrice() {
@@ -18,10 +18,24 @@ public class ManyPackages implements Item {
         }
 
         public String toString() {
-                return Integer.toString(count) + type + "s";
+                return count + "x" + type;
         }
 
         public int getCount() {
-                return this.count();
+                return this.count;
         }
+
+        public String getName() {
+                return this.type.getName();
+        }
+
+        public String getType() {
+                return "ManyPackages " + type.getType();
+        }
+
+        public Item stack(int count) {
+                this.count += count;
+                return null;
+        }
+
 }

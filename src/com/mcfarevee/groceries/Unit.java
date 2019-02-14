@@ -1,4 +1,7 @@
+package com.mcfarevee.groceries;
+
 /**
+ *
  * A Unit of measurement.  The primary units available at 
  * Unit.GRAM, Unit.KILOGRAM, Unit.OUNCE, and Unit.POUND.
  */

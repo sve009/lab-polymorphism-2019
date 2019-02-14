@@ -1,4 +1,4 @@
-
+package com.mcfarevee.groceries;
 
 public class Weight {
         public Unit unit;

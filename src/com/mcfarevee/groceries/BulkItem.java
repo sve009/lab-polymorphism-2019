@@ -1,4 +1,4 @@
-
+package com.mcfarevee.groceries;
 
 public class BulkItem implements Item {
         private BulkFood food;
@@ -16,7 +16,7 @@ public class BulkItem implements Item {
         }
 
         public int getPrice() {
-                return this.amount * this.food.pricePerUnit;
+                return this.amount * this.food.pricePerUnit();
         }
 
         public boolean equals(BulkItem other) {
@@ -24,11 +24,24 @@ public class BulkItem implements Item {
         }
 
         public String toString() {
-                return amount + " " + unit + "s" + " of " + food.name;
+                return amount + " " + unit + (amount == 1 ? "" : "s") + " of " + food.name();
         }
 
         public int getCount() {
                 return 1;
+        }
+
+        public String getName() {
+                return this.food.name();
+        }
+
+        public String getType() {
+                return "BulkItem " + food.name() + unit;
+        }
+
+        public Item stack(int count) {
+                this.amount += count;
+                return null;
         }
 }
 

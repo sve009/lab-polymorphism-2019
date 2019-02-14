@@ -1,4 +1,4 @@
-
+package com.mcfarevee.groceries;
 
 public class Package implements Item {
         public String name;
@@ -20,11 +20,27 @@ public class Package implements Item {
         }
 
         public boolean equals(Package other) {
-                return this.name == other.name && this.weight == other.weight 
+                return this.name.equals(other.name) && this.weight.equals(other.weight)  
                         && this.price == other.price;
         }
 
         public String toString() {
-                return weight + " of " + name;
+                return weight + " package of " + name;
+        }
+
+        public int getCount() {
+                return 1;
+        }
+
+        public String getType() {
+                return "Package" + name + weight + price;
+        }
+
+        public Item stack(int count) {
+                return new ManyPackages(this, count + 1);
+        }
+
+        public String getName() {
+                return this.name;
         }
 }
