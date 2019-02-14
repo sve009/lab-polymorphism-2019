@@ -1,18 +1,30 @@
 package com.mcfarevee.groceries;
 
+/**
+ * Small interface used for items in
+ * a grocery store.
+ * Written by Sam Eagen
+ */
 public interface Item {
-        public Weight getWeight();
+  //returns the Items weight
+  public Weight getWeight();
 
-        public int getPrice();
+  //returns the price
+  public int getPrice();
 
-        public String toString();
+  //used for printing off items in a cart in a prettier way
+  public String toString();
 
-        public int getCount();
+  //Returns how many objects are in the Item
+  public int getCount();
 
-        public String getName();
+  //Returns the name of the Item
+  public String getName();
 
-        public String getType();
+  //Returns information used to check for equality
+  public String getType();
 
-        public Item stack(int count);
+  //Used for stacking similar objects
+  public Item stack(int count);
 
 }

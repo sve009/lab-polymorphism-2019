@@ -1,46 +1,56 @@
 package com.mcfarevee.groceries;
 
+/**
+ * A class to represent packages of food.
+ * Written by Sam Eagen
+ */
 public class Package implements Item {
-        public String name;
-        public Weight weight;
-        public int price;
+  //fields---------------------------
 
-        public Package(String name, Weight weight, int price) {
-                this.name = name;
-                this.weight = weight;
-                this.price = price;
-        }
+  public String name;
+  public Weight weight;
+  public int price;
 
-        public Weight getWeight() {
-                return this.weight;
-        }
+  //constructor----------------------
 
-        public int getPrice() {
-                return this.price;
-        }
+  public Package(String name, Weight weight, int price) {
+    this.name = name;
+    this.weight = weight;
+    this.price = price;
+  }
 
-        public boolean equals(Package other) {
-                return this.name.equals(other.name) && this.weight.equals(other.weight)  
-                        && this.price == other.price;
-        }
+  //methods--------------------------
 
-        public String toString() {
-                return weight + " package of " + name;
-        }
+  public Weight getWeight() {
+    return this.weight;
+  }
 
-        public int getCount() {
-                return 1;
-        }
+  public int getPrice() {
+    return this.price;
+  }
 
-        public String getType() {
-                return "Package" + name + weight + price;
-        }
+  public boolean equals(Package other) {
+    return this.name.equals(other.name) && this.weight.equals(other.weight)  
+      && this.price == other.price;
+  }
 
-        public Item stack(int count) {
-                return new ManyPackages(this, count + 1);
-        }
+  public String toString() {
+    return weight + " package of " + name;
+  }
 
-        public String getName() {
-                return this.name;
-        }
+  public int getCount() {
+    return 1;
+  }
+
+  public String getType() {
+    return "Package" + name + weight + price;
+  }
+
+  public Item stack(int count) {
+    return new ManyPackages(this, count + 1);
+  }
+
+  public String getName() {
+    return this.name;
+  }
 }

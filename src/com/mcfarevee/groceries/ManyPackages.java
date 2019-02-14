@@ -1,41 +1,52 @@
 package com.mcfarevee.groceries;
 
+/**
+ * A class that stores multiple packages through a
+ * count field.
+ * Written by Kabir Jain and Sam Eagen
+ */
 public class ManyPackages implements Item {
-        private Package type;
-        private int count;
+  //fields---------------------
 
-        public ManyPackages(Package type, int count) {
-                this.type = type;
-                this.count = count;                   
-        }
+  private Package type;
+  private int count;
 
-        public Weight getWeight() {
-                return new Weight(type.getWeight().unit, type.getWeight().amount * count);
-        }
+  //constructor------------------
 
-        public int getPrice() {
-                return this.type.price * this.count;
-        }
+  public ManyPackages(Package type, int count) {
+    this.type = type;
+    this.count = count;                   
+  }
 
-        public String toString() {
-                return count + "x" + type;
-        }
+  //methods----------------------
 
-        public int getCount() {
-                return this.count;
-        }
+  public Weight getWeight() {
+    return new Weight(type.getWeight().unit, type.getWeight().amount * count);
+  }
 
-        public String getName() {
-                return this.type.getName();
-        }
+  public int getPrice() {
+    return this.type.price * this.count;
+  }
 
-        public String getType() {
-                return "ManyPackages " + type.getType();
-        }
+  public String toString() {
+    return count + "x" + type;
+  }
 
-        public Item stack(int count) {
-                this.count += count;
-                return null;
-        }
+  public int getCount() {
+    return this.count;
+  }
+
+  public String getName() {
+    return this.type.getName();
+  }
+
+  public String getType() {
+    return "ManyPackages " + type.getType();
+  }
+
+  public Item stack(int count) {
+    this.count += count;
+    return null;
+  }
 
 }
