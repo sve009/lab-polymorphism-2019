@@ -45,11 +45,13 @@ public class Testing {
     cart2.addItem(new BulkItem(bananas, Unit.POUND, 3));
     pen.println("Add two packages of oreos");
     cart2.addItem(new com.mcfarevee.groceries.Package("oreos", new Weight(Unit.OUNCE, 12), 399));
+    cart2.addItem(new BulkItem(bananas, Unit.POUND, 3));
     cart2.addItem(new com.mcfarevee.groceries.Package("oreos", new Weight(Unit.OUNCE, 12), 399));
     pen.println("Add many packages of cuties");
     cart2.addItem(new ManyPackages(new com.mcfarevee.groceries.Package("cuties", new Weight(Unit.OUNCE, 12), 250), 3));
     pen.println("Add a package of cuties");
     cart2.addItem(new com.mcfarevee.groceries.Package("cuties", new Weight(Unit.OUNCE, 12), 250));
+    cart2.addItem(new BulkItem(bananas, Unit.POUND, 3));
     pen.println("Contents of cart2");
     cart2.printContents(pen);
     pen.println("Merge cart");
